@@ -28,7 +28,7 @@ void MainWindow::on_extractBtn_clicked()
     // getn page
     int page = ui->page->text().toInt();
     // getn text frm slcted page
-    QString selectedText = document->getAllText(page).text();
+    *selectedText = document->getAllText(page).text();
     // settn text on textedit
-    ui->textEdit->setText(selectedText);
+    ui->textEdit->setText(*selectedText);
 }
